@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">My Projects</h1>
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Inventory Management System</h5>
+                <span class="badge bg-primary mb-2">Python</span>
+                <span class="badge bg-secondary mb-2">Flask</span>
+                <span class="badge bg-info mb-2">SQLite</span>
+                <p class="card-text mt-3">
+                    A comprehensive inventory management system designed to help businesses track their products, 
+                    manage stock levels, and monitor sales. Key features include:
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Real-time stock tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Product categorization</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Low stock alerts</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Sales reporting</li>
+                </ul>                <div class="mt-3">
+                    <a href="https://github.com/Natasha-Justine/karibu" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-github me-2"></i>View Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Future Project</h5>
+                <p class="card-text">Coming soon! Stay tuned for more exciting projects.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
