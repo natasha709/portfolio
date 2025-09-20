@@ -4,19 +4,18 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mb-4">Contact Me</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card mb-4">
+<div class="container py-5">
+    <h1 class="fw-bold mb-5 text-center">Contact Me</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card border-0 shadow mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Get in Touch</h5>
+                    <h3 class="card-title fw-bold mb-3">Get in Touch</h3>
                     {% if messages %}
                         {% for message in messages %}
                             <div class="alert alert-success">{{ message }}</div>
                         {% endfor %}
                     {% endif %}
-                    <p class="text-muted mb-3">No password required. Just fill in your details and message.</p>
                     <form method="post" novalidate>
                         {% csrf_token %}
                         <div class="mb-3">
@@ -36,23 +35,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Connect With Me</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <div>
-                            <h6>Email</h6>
-                            <p><a href="#" class="text-muted disabled" tabindex="-1" aria-disabled="true">natashawinnie20@gmail.com</a></p>
-                        </div>
-                        <div>
-                            <h6>Social Media</h6>
-                            <div class="d-flex gap-3">
-                                <a href="https://www.linkedin.com/in/justine-natasha/" class="text-decoration-none" target="_blank">LinkedIn</a>
-                                <a href="https://github.com/Natasha-Justine" class="text-decoration-none" target="_blank">GitHub</a>
-                                <a href="#" class="text-decoration-none disabled" tabindex="-1" aria-disabled="true">Twitter</a>
-                            </div>
-                        </div>
+        <div class="col-md-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-3">Connect With Me</h4>
+                    <p class="mb-2"><strong>Email:</strong> <span class="text-primary">natashawinnie20@gmail.com</span></p>
+                    <div class="d-flex justify-content-center gap-3 mb-2">
+                        <a href="https://www.linkedin.com/in/justine-natasha/" class="btn btn-outline-primary rounded-circle" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="https://github.com/Natasha-Justine" class="btn btn-outline-dark rounded-circle" target="_blank"><i class="bi bi-github fs-4"></i></a>
                     </div>
                 </div>
             </div>
