@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Flask and Bootstrap 5.
 
-## 🚀 Features
+##  Features
 
 - Responsive design using Bootstrap 5
 - Clean and modern UI
@@ -11,7 +11,7 @@ A modern, responsive portfolio website built with Flask and Bootstrap 5.
 - About me section
 - Skills and certifications display
 
-## 📁 Project Structure
+##  Project Structure
 ```
 portfolio/
 │
@@ -30,14 +30,14 @@ portfolio/
     └── contact.html      # Contact form
 ```
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python Flask
 - Bootstrap 5
 - HTML/CSS
 - JavaScript
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Clone the repository
 ```bash
@@ -70,9 +70,9 @@ Visit `http://localhost:5000` in your browser to see the website.
 ## 🌐 Live Demo
 [Coming Soon]
 
-## 📝 License
+##  License
 This project is open source and available under the [MIT License](LICENSE).
 
-## 📞 Contact
+##  Contact
 - Email: natashawinnie20@gmail.com
 - GitHub: [@Natasha-Justine](https://github.com/Natasha-Justine)
