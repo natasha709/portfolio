@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: portfolio
+    env: static
+    buildCommand: echo "Nothing to build"
+    staticPublishPath: ./
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

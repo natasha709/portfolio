@@ -707,10 +707,10 @@
         }
 
         .projects-grid {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(2, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             justify-content: center;
         }
@@ -734,12 +734,11 @@
         }
 
         .project-card.featured {
-            border: 2px solid var(--primary-color);
             position: relative;
         }
 
         .project-card.featured::before {
-            content: 'Featured';
+            content: '';
             position: absolute;
             top: -10px;
             right: 20px;
@@ -759,6 +758,26 @@
             color: rgba(255, 255, 255, 0.8);
             flex-grow: 1;
             margin-bottom: 1.5rem;
+        }
+
+        .project-image {
+            height: 220px;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--darker-bg);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
         }
 
         .project-tech {
@@ -1028,8 +1047,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu-toggle">
@@ -1138,50 +1157,46 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Professional Experience Section -->
     <section id="experience" class="experience">
-        <h2 class="section-title">Current Work & Experience</h2>
+        <h2 class="section-title">Professional Experience</h2>
         <div class="experience-container">
             <div class="experience-card">
                 <div class="experience-header">
-                    <h3>Software Developer Intern</h3>
-                    <span class="experience-duration">Current Position</span>
+                    <h3>Full-Stack Software Developer</h3>
+                    <span class="experience-duration">2+ Years Experience</span>
                 </div>
-                <h4 class="company">SwanAir Travels and Safaris Uganda</h4>
                 <div class="experience-description">
-                    <p>Developing a comprehensive Safari Management and Costing System:</p>
+                    <p>Passionate full-stack developer with over 2 years of hands-on experience building scalable web applications and solving complex business problems through technology.</p>
+                    
+                    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Key Achievements:</h4>
                     <ul>
-                        <li>Designed and implemented user-friendly interfaces focusing on usability and accessibility</li>
-                        <li>Implemented robust user authentication and authorization systems</li>
-                        <li>Created role-specific interfaces for consultants, managers, and administrators</li>
-                        <li>Developed an advanced admin dashboard for real-time system configuration</li>
-                        <li>Designed and implemented a centralized safaris costing database</li>
-                        <li>Built a consultant dashboard for client data management and itinerary creation</li>
-                        <li>Created a dynamic costing module with drag-and-drop activity selection</li>
-                        <li>Developed an automated cost engine for trip pricing and markup calculations</li>
-                        <li>Implemented branded quotation generation in PDF and web formats</li>
-                        <li>Engineered offline functionality with data synchronization capabilities</li>
+                        <li>Successfully completed internship at SwanAir Travels and Safaris Uganda, developing a comprehensive Safari Management and Costing System</li>
+                        <li>Built and deployed multiple client projects including inventory management systems and environmental consultancy websites</li>
+                        <li>Specialized in Python/Django backend development with modern JavaScript frontend frameworks</li>
+                        <li>Experienced in full project lifecycle from requirements gathering to deployment and maintenance</li>
+                        <li>Proven track record of improving business operations through custom software solutions</li>
+                        <li>Strong foundation in database design, API development, and cloud deployment</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">Professional Focus:</h4>
+                    <ul>
+                        <li>Building scalable web applications using Python/Django and React</li>
+                        <li>Developing RESTful APIs and database architectures</li>
+                        <li>Creating user-friendly interfaces with focus on accessibility and performance</li>
+                        <li>Implementing modern development practices including version control and testing</li>
                     </ul>
                 </div>
                 <div class="tech-stack">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Django</span>
-                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">PostgreSQL</span>
                     <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">Git</span>
                     <span class="tech-tag">Cloud Deployment</span>
                 </div>
-            </div>
-
-            <div class="looking-for">
-                <h3><i class="fas fa-handshake"></i> Open to Opportunities</h3>
-                <p>I'm actively seeking internship opportunities and open-source collaborations where I can apply my skills and continue learning. Particularly interested in:</p>
-                <ul>
-                    <li>Full-stack development roles (Python/Django + React)</li>
-                    <li>Backend API development projects</li>
-                    <li>Mobile development with React Native</li>
-                    <li>Open-source contributions in web technologies</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -1238,20 +1253,75 @@
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card featured">
-                <h3>Safari Costing Software</h3>
-                <p>A sophisticated web application for SwanAir Travels and Safaris that automates and streamlines the safari costing process. Features include dynamic pricing calculations, itinerary builder with drag-and-drop functionality, role-based dashboards, and offline capabilities.</p>
-                <div class="project-tech">
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">Node.js</span>
-                    <span class="tech-badge">NeonDB</span>
-                    <span class="tech-badge">RxDB</span>
-                    <span class="tech-badge">REST API</span>
+                <div class="project-image">
+                    <img src="images/safari.npg.png" alt="Safari Costing Software - Key Features Dashboard" class="project-img">
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/natasha709" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
+                <div class="project-content">
+                    <h3>Safari Costing Software</h3>
+                    <p>A comprehensive web application for SwanAir Travels and Safaris that automates safari costing with dynamic pricing calculations, itinerary builder with drag-and-drop functionality, role-based dashboards, and offline capabilities. The system streamlined safari management processes and included automated cost calculations for improved efficiency.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">NeonDB</span>
+                        <span class="tech-badge">RxDB</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/natasha709" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="https://165.227.60.146/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="images/invetory.png" alt="Karibu Groceries Inventory Management Dashboard" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3>Inventory Management System – Karibu Groceries</h3>
+                    <p>Built a lightweight inventory-tracking web system to replace paper records for Karibu Groceries. Implemented CRUD APIs and database schemas to improve operational efficiency through automation. The system streamlined inventory management processes and included comprehensive documentation for setup and usage.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">CRUD Operations</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/natasha709" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="images/upwil.png" alt="Upwil Environmental Integrated Consultancy Website" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3>Upwil Environmental Integrated Consultancy</h3>
+                    <p>A leading environmental consultancy and research organization dedicated to providing innovative solutions for sustainable development. Built a comprehensive website showcasing their expertise in environmental management, climate change adaptation, and sustainable development practices. Features professional design with service showcases and client engagement capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Responsive Design</span>
+                        <span class="tech-badge">Environmental Focus</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/natasha709" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="https://upwil.onrender.com/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
                 </div>
             </div>
 
